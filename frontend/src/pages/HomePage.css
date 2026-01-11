@@ -1,0 +1,43 @@
+.home-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://www.dhl.com/content/dam/dhl/global/delivered/images/social-share-1200x630/d128-dl-bytes-on-the-brain.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px 60px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.home-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-overlay p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .home-overlay {
+    padding: 20px 30px;
+  }
+
+  .home-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .home-overlay p {
+    font-size: 1rem;
+  }
+}

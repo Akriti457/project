@@ -1,0 +1,109 @@
+/* Main container with background image */
+.backstory-container {
+  min-height: 100vh;
+  background-image: url("https://cdn.pixabay.com/photo/2023/11/15/15/02/ai-generated-8390273_960_720.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark overlay for readability */
+.backstory-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Header section */
+.backstory-header {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.backstory-header h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.backstory-header p {
+  font-size: 16px;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Form container (glass effect) */
+.backstory-form {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  width: 100%;
+  max-width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Textarea */
+.backstory-form textarea {
+  min-height: 200px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  resize: vertical;
+  outline: none;
+  color: #111827;
+  background-color: rgb(232, 247, 247);
+}
+
+/* Save button */
+.backstory-form button {
+  align-self: flex-end;
+  padding: 10px 20px;
+  font-size: 15px;
+  background-color: #3026de;
+  color: #f8f9fa;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.backstory-form button:hover {
+  background-color: #4338ca;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .backstory-header h1 {
+    font-size: 28px;
+  }
+
+  .backstory-form {
+    padding: 20px;
+  }
+}

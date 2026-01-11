@@ -1,0 +1,99 @@
+/* Main container with background image */
+.upload-container {
+  min-height: 100vh;
+  background-image: url("https://img.freepik.com/premium-photo/ai-generated-book-books-table-modern-vintage-style_858577-1020.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dark overlay */
+.upload-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+/* Header section */
+.upload-header {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.upload-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.upload-header p {
+  font-size: 16px;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+/* Upload form (glass effect) */
+.upload-form {
+  position: relative;
+  z-index: 1;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+}
+
+/* File input */
+.upload-form input[type="file"] {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Upload button */
+.upload-btn {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #4338ca;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .upload-header h1 {
+    font-size: 28px;
+  }
+
+  .upload-form {
+    width: 100%;
+  }
+}
